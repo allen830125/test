@@ -1,0 +1,44 @@
+{
+  "name": "webpack_test",
+  "version": "1.0.0",
+  "description": "the first test webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack -p --progress --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "ejs": "^2.5.6",
+    "express": "^4.15.4",
+    "moment": "^2.18.1",
+    "mongoose": "^4.11.0",
+    "node-sass-middleware": "^0.11.0",
+    "underscore": "^1.8.3",
+    "webpack": "^3.4.1",
+    "webpack-dev-server": "^2.6.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-component": "^0.10.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "css-loader": "^0.28.1",
+    "eslint": "^3.19.0",
+    "file-loader": "^0.11.1",
+    "html-webpack-plugin": "^2.28.0",
+    "nodemon": "^1.11.0",
+    "style-loader": "^0.17.0",
+    "uglifyjs-webpack-plugin": "^1.1.1",
+    "url-loader": "^0.5.8",
+    "vue-easytable": "^1.5.10",
+    "vue-hot-reload-api": "^2.2.4",
+    "vue-loader": "^12.0.3",
+    "webpack": "^2.7.0",
+    "webpack-dev-server": "^2.9.5",
+    "webpack-merge": "^4.1.0"
+  }
+}
