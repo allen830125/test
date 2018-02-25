@@ -2,11 +2,11 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const config = {
-    entry: './public/js/src/testInput.js',
+    entry: './public/js/src/socket_example.js',
     output: {
         publicPath: '/dist',
         path: path.join(__dirname, 'public', 'js/output/'),
-        filename: 'testOutput.js'
+        filename: 'socket_example.js'
     },
     module: {
         loaders: [

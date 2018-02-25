@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Test socket</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="example-chat l-demo-container" id="chatApp">
+    <header>Socket.io Chat Demo</header>
+
+    <div class='example-chat-toolbar'>
+        <label>Username:</label>
+        <input type='text' v-model="userName" placeholder='enter a username...' >
+    </div><!-- end example-chat-toolbar -->
+
+    <ul class="example-chat-messages">
+        <li v-for="list in messageList">
+        <strong class="example-chat-username">{{list.name}}</strong> {{list.msg}}
+        </li>
+    </ul>
+
+    <footer>
+        <input type='text' v-model="message" placeholder='Type a message...' @keyup.enter="sendMsg">
+    </footer>
+</div>
+<script src="/js/output/socket_example.js"></script>
+</body>
+</html>
