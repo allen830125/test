@@ -2,11 +2,21 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
 const config = {
-    entry: './public/js/src/socket_example.js',
+    entry: {
+        // "/common/BacUIComps": "./public/src/common/bacUIComps/main.js",
+        // "/sales/PMS0610010": "./public/src/sales/PMS0610010/main.js",
+        // "/sales/PMS0620020": "./public/src/sales/PMS0620010/main.js",
+        // "/sales/PMS0620050": "./public/src/sales/PMS0620050/main.js",
+        // "/setup/PMS0810230_setup": "./public/src/setup/PMS0810230/main.js",
+        "/output/testOutput": "./public/js/src/testInput.js",
+        // "/reservation/PMS0110040": "./public/src/reservation/PMS0110040/main.js"
+        // "/reservation/PMS0110050": "./public/src/reservation/PMS0110050/main.js",
+        // "/system/permissionSetup": ["./public/src/admin/permission/permissionSetup", "./public/src/admin/permission/store"],
+        // "/system/prgPropsSetup": "./public/src/admin/prgPropsSetup/main.js"
+    },
     output: {
-        publicPath: '/dist',
-        path: path.join(__dirname, 'public', 'js/output/'),
-        filename: 'socket_example.js'
+        path: path.join(__dirname, 'public', 'js'),
+        filename: '[name].js'
     },
     module: {
         loaders: [

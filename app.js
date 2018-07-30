@@ -13,6 +13,7 @@ var io = require('socket.io')(server, {
     serveClient: false,
     origins: 'http://localhost:1780'
 });
+var apiRouter = require("./route/api");
 
 //socket設定,初始化io event
 
@@ -32,8 +33,9 @@ app.use(bodyParser.json());
 
 //routers 的設定
 app.get('/', function (req, res) {
-    res.render('socket_example');
+    res.render('index');
 });
+app.use("/api", apiRouter);
 
 server.listen(port, function () {
     console.log('Express server listening on port ' + app.get('port'));

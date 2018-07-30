@@ -4,7 +4,7 @@
   "description": "the first test webpack",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "dev": "webpack -p --progress --watch"
   },
   "author": "",
@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
+    "babel-jest": "^23.4.2",
     "babel-loader": "^7.0.0",
     "babel-plugin-component": "^0.10.1",
     "babel-plugin-transform-runtime": "^6.23.0",
@@ -35,6 +36,8 @@
     "eslint": "^3.19.0",
     "file-loader": "^0.11.1",
     "html-webpack-plugin": "^2.28.0",
+    "jest": "^23.4.2",
+    "jest-vue": "^0.8.2",
     "nodemon": "^1.11.0",
     "style-loader": "^0.17.0",
     "uglifyjs-webpack-plugin": "^1.1.1",
@@ -42,8 +45,24 @@
     "vue-easytable": "^1.5.10",
     "vue-hot-reload-api": "^2.2.4",
     "vue-loader": "^12.0.3",
+    "vue-test-utils": "^1.0.0-beta.11",
     "webpack": "^2.7.0",
     "webpack-dev-server": "^2.9.5",
     "webpack-merge": "^4.1.0"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "vue"
+    ],
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
+      ".*\\.(vue)$": "<rootDir>/node_modules/jest-vue"
+    },
+    "moduleNameMapper": {
+      "@/(.*)$": "<rootDir>/test/first/$1"
+    },
+    "verbose": true,
+    "testURL": "http://localhost/"
   }
 }
