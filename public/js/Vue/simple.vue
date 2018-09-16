@@ -6,6 +6,9 @@
 </template>
 
 <script>
+    import "es6-promise";
+
+
     export default {
         name: "simple",
         data: function () {
@@ -17,12 +20,12 @@
         },
         methods: {
             async submit() {
-                this.sum = await $.post("/api/sum", {one: this.one, two: this.two}).then(result => {
-                    if (result.success) {
-                        return result.data;
-                    }
+                this.sum = await this.post("/api/sum", {one: this.one, two: this.two}).then(result => {
+                    return result.data;
                 });
-                console.log(this.sum);
+            },
+            async post(url, param) {
+                return await $.post(url, param);
             }
         }
     }
