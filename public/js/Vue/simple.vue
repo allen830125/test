@@ -7,6 +7,8 @@
 
 <script>
     import "es6-promise";
+    import axios from "axios";
+    import $ from "jquery";
 
 
     export default {
@@ -20,12 +22,8 @@
         },
         methods: {
             async submit() {
-                this.sum = await this.post("/api/sum", {one: this.one, two: this.two}).then(result => {
-                    return result.data;
-                });
-            },
-            async post(url, param) {
-                return await $.post(url, param);
+                const response = await axios.post('api/sum', {one: this.one, two: this.two});
+                this.sum = response.data;
             }
         }
     }
